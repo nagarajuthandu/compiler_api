@@ -2,7 +2,7 @@ let express=require("express")
 let fs=require("fs")
 const { exec } = require('child_process');
 let app=express();
-const PORT=80;
+const PORT= process.env.PORT| 80;
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.post("/",(req,res)=>{
