@@ -10,11 +10,8 @@ res.send("api is working at post")
 });
 app.post("/",(req,res)=>{
     let data=req.body
-    if(!data.language)
-      {
-        res.status(200).json({apierror : "please specify language java or py"})
-      }
-
+    
+    
     let filename="Program."+req.body.language
     fs.writeFile(filename,data.code, function (err) {
         if (err) throw err;
