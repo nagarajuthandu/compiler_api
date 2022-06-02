@@ -39,7 +39,8 @@ app.post("/",(req,res)=>{
   }
 
   console.log(`stdout:\n${stdout}`);
-  res.send(`output:\n${stdout}`);
+  
+  res.status(200).json({output : `${stdout}`})
 
   if(data.language==="java")
   {
