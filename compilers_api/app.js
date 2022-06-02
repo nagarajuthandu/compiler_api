@@ -5,6 +5,9 @@ let app=express();
 const PORT= process.env.PORT| 80;
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
+app.get("/",(req,res)=>{
+res.send("api is working at post")
+});
 app.post("/",(req,res)=>{
     let data=req.body
     
